@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Map</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <div class="header__title"><h1>Map Places</h1></div>
+    </section>
+    <section class="container">
+      <div id="map"></div>
+      <div class="content">
+        <div class="content__form" id="myForm">
+          <h1>Add New Place</h1>
+          <form id="formControl">
+            <div class="form-group">
+              <label for="">Title</label>
+              <input type="text" class="form-control" id="txtTitle" />
+            </div>
+            <div class="form-group">
+              <label for="">Description</label>
+              <input type="text" class="form-control" id="txtDescription" />
+            </div>
+            <div class="form-group">
+              <label for="">Open Hour</label>
+              <input type="number" class="form-control" id="txtOpen" />
+            </div>
+            <div class="form-group">
+              <label for="">Close Hour</label>
+              <input type="number" class="form-control" id="txtClose" />
+            </div>
+            <div class="form-group">
+              <label for="">Latitude</label>
+              <input type="text" class="form-control" id="txtLat" />
+            </div>
+            <div class="form-group">
+              <label for="">Longtitude</label>
+              <input type="text" class="form-control" id="txtLng" />
+            </div>
+            <div class="form-group">
+              <label for="">Key words</label>
+              <input type="text" class="form-control" id="txtKeyword" />
+            </div>
+            <div class="form-group">
+              <button type="button" id="btnSubmitForm">Submit</button>
+              <button type="button" id="btnCancelForm">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class="content__info" id="placeInfo"></div>
+        <div class="content__tool">
+          <div class="searchTool">
+            <select id="filterSelect">
+              <option value="0">Search by</option>
+              <option value="1">Title</option>
+              <option value="2">Key Word</option>
+            </select>
+            <div class="form-group">
+              <input type="text" class="form-control" id="search" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../Model/Place.js"></script>
+    <script src="../Model/PlaceList.js"></script>
+    <script src="../Controllers/map.js"></script>
+    <!-- Google Api Key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBII9s4OSF2dylCLvdCmCp5PpaHVXqUb9I&callback=initMap"></script>
+  </body>
+</html>
