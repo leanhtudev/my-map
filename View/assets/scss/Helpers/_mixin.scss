@@ -1,0 +1,25 @@
+@mixin btn($color) {
+  background-color: $color;
+  color: white;
+  padding: 10px 20px;
+  border: unset;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    color: #212529;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+@mixin title($fontSize) {
+  text-align: center;
+  font-size: $fontSize;
+}
